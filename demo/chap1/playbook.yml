@@ -1,0 +1,9 @@
+---
+- hosts: all
+  become: true
+  tasks:
+    - name: Ensure timesyncd is running.
+      service: 
+        name: systemd-timesyncd 
+        state: started 
+        enabled: yes
